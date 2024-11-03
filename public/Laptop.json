@@ -1,0 +1,110 @@
+[
+  {
+    "product_id": 301,
+    "product_title": "ASUS ROG Zephyrus G14 Gaming Laptop",
+    "product_image": "https://i.ibb.co.com/bshSTjF/lp1.jpg",
+    "category": "Laptops",
+    "price": 2400,
+    "description": "A high-performance gaming laptop with AMD Ryzen 9 processor and NVIDIA GeForce RTX 3060.",
+    "Specification": [
+      "Processor: AMD Ryzen 9 5900HS",
+      "Graphics Card: NVIDIA GeForce RTX 3060",
+      "RAM: 32GB",
+      "Storage: 2TB SSD"
+    ],
+    "availability": true,
+    "rating": 4.9,
+    "brand": "ASUS",
+    "discount": 15
+  },
+  {
+    "product_id": 302,
+    "product_title": "Dell XPS 13 Ultra Slim Laptop",
+    "product_image": "https://i.ibb.co.com/nC33NLx/lp2.jpg",
+    "category": "Laptops",
+    "price": 1800,
+    "description": "Premium ultrabook with Intel Core i7 processor and stunning 4K display.",
+    "Specification": [
+      "Processor: Intel Core i7-1165G7",
+      "RAM: 16GB",
+      "Storage: 1TB SSD",
+      "Display: 13.4 inches 4K Ultra HD"
+    ],
+    "availability": true,
+    "rating": 4.8,
+    "brand": "Dell",
+    "discount": 10
+  },
+  {
+    "product_id": 303,
+    "product_title": "Lenovo ThinkPad X1 Carbon Gen 9",
+    "product_image": "https://i.ibb.co.com/CQ4V5rT/lp3.jpg",
+    "category": "Laptops",
+    "price": 2000,
+    "description": "Business laptop with Intel Core i7, 14-inch display, and legendary ThinkPad keyboard.",
+    "Specification": [
+      "Processor: Intel Core i7-1165G7",
+      "RAM: 16GB",
+      "Storage: 512GB SSD",
+      "Display: 14 inches Full HD"
+    ],
+    "availability": true,
+    "rating": 4.7,
+    "brand": "Lenovo",
+    "discount": 12
+  },
+  {
+    "product_id": 304,
+    "product_title": "HP Spectre x360 14 Convertible Laptop",
+    "product_image": "https://i.ibb.co.com/5Wfp6gx/lp4.jpg",
+    "category": "Laptops",
+    "price": 2100,
+    "description": "Stylish 2-in-1 laptop with Intel Core i7 and premium metal design.",
+    "Specification": [
+      "Processor: Intel Core i7-1165G7",
+      "RAM: 16GB",
+      "Storage: 1TB SSD",
+      "Display: 14 inches Touchscreen"
+    ],
+    "availability": true,
+    "rating": 4.6,
+    "brand": "HP",
+    "discount": 10
+  },
+  {
+    "product_id": 305,
+    "product_title": "Razer Blade 15 Advanced Gaming Laptop",
+    "product_image": "https://i.ibb.co.com/sF9F1JR/lp5.jpg",
+    "category": "Laptops",
+    "price": 3000,
+    "description": "High-end gaming laptop with Intel Core i9 and 4K OLED display.",
+    "Specification": [
+      "Processor: Intel Core i9-11900H",
+      "Graphics Card: NVIDIA GeForce RTX 3080",
+      "RAM: 32GB",
+      "Storage: 1TB SSD"
+    ],
+    "availability": true,
+    "rating": 5.0,
+    "brand": "Razer",
+    "discount": 12
+  },
+  {
+    "product_id": 306,
+    "product_title": "Microsoft Surface Laptop 4",
+    "product_image": "https://i.ibb.co.com/BcBtg7m/lp6.jpg",
+    "category": "Laptops",
+    "price": 1500,
+    "description": "Versatile laptop with Intel Core i5 and PixelSense touchscreen display.",
+    "Specification": [
+      "Processor: Intel Core i5-1135G7",
+      "RAM: 16GB",
+      "Storage: 512GB SSD",
+      "Display: 13.5 inches Touchscreen"
+    ],
+    "availability": true,
+    "rating": 4.7,
+    "brand": "Microsoft",
+    "discount": 8
+  }
+]

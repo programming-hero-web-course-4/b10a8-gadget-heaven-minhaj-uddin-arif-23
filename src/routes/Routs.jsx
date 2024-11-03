@@ -5,6 +5,8 @@ import Home from "../pages/Home";
 import Dashboard from "../pages/Dashboard";
 import Two from "../components/two";
 import ProductDetails from "../components/ProductDetails";
+import Laptop from "../components/Laptop";
+import Accessories from "../components/Accessories";
 
 const routers = createBrowserRouter([
     {
@@ -25,6 +27,16 @@ const routers = createBrowserRouter([
             path:'product/:product_id',
             element:<ProductDetails />,
             loader:() => fetch("./All_fake_data.json")
+        },
+        {
+          path:'/laptop',
+          element: <Laptop />,
+          loader:() => fetch('./Laptop.json')
+        },
+        {
+          path:'/accessories',
+          element: <Accessories />,
+          loader:() => fetch('./Accessories.json')
         },
         {
           path:'/dashBoard',

@@ -1,7 +1,9 @@
 import React from 'react'
 import { useLoaderData, useParams } from 'react-router-dom'
 import ProductDetailstext from './ProductDetailstext'
+import { toast } from 'react-hot-toast';
 
+const notify = () => toast.success('Successfully added you Item.');
 /*
 "product_id": 313,
     "product_title": "Apple MacBook Air (M1) - 256GB",
@@ -49,7 +51,7 @@ export default function ProductDetails() {
       <h2>Rating <i class="fa-solid fa-star text-yellow-300"></i></h2>
       <h1 className='text-yellow-500'><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>{rating}</h1>
           <div className='flex gap-3 my-4'>
-          <button className='btn bg-purple-600 text-white rounded-3xl '>
+          <button onClick={notify} className='btn bg-purple-600 text-white rounded-3xl '>
           Add to cart <i class="fa-solid fa-cart-plus"></i></button>
           <button><a href=""><i class="fa-regular fa-heart"></i></a></button>
           </div>

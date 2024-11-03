@@ -33,9 +33,9 @@ export default function Nabvar() {
     </div>
     <div className="navbar-center invisible lg:visible lg:flex">
       <ul className="menu menu-horizontal px-1 text-sm font-semibold gap-6">
-        <NavLink to={`/`} className={(e) => {return e.isActive? "red":""}} ><li>Home</li></NavLink>
-        <NavLink to={`/statistics`} className={(e) => {return e.isActive? "red":""}} ><li>Statistics</li></NavLink>
-        <NavLink to={`/dashBoard`} className={(e) => {return e.isActive? "red":""}} ><li>Dashborad</li></NavLink>
+        <NavLink to={`/`} className={(e) => {return e.isActive? "text-black":""}} ><li>Home</li></NavLink>
+        <NavLink to={`/statistics`} className={(e) => {return e.isActive? "text-black":""}} ><li>Statistics</li></NavLink>
+        <NavLink to={`/dashBoard`} className={(e) => {return e.isActive? "text-black":""}} ><li>Dashborad</li></NavLink>
         {/* <NavLink to={`/execories`} className={(e) => {return e.isActive? "bg-red-500":""}} ><li>Accessories</li></NavLink> */}
       </ul>
     </div>
