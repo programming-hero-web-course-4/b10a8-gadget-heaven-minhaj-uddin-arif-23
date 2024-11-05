@@ -3,7 +3,7 @@ import { useLoaderData, useParams } from 'react-router-dom'
 import ProductDetailstext from './ProductDetailstext'
 import { toast } from 'react-hot-toast';
 import { addFavourite } from '../utiles/localStorage';
-import { key } from 'localforage';
+
 
 // const notify = () => toast.success('Successfully added you Item.');
 

@@ -1,22 +1,32 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useLoaderData, useParams } from 'react-router-dom'
+import Allproducts from './Allproducts';
 
-export default function ShowAlitem({loadData}) {
-  const {product_image,product_title,price,product_id} = loadData || {}
+export default function ShowAlitem() {
+  const data= useLoaderData()
+  // console.log(data);
+  const {category} = useParams()
+  // console.log(obj);
+    const [product,setProduct] = useState([])
+    useEffect(()=>{
+      if(category){
+        const filterByCategory = [...data].filter(
+          product => product.category === category
+        )
+        setProduct(filterByCategory)
+      }else{
+        setProduct(data)
+      }
+     
+    },[data,category])
+
   return (
-    <div>
-      <div className="card bg-base-100 w-[340px] shadow-xl">
-  <figure className='w-ful h-44 overflow-hidden'>
-    <img
-      src={product_image}
-     />
-  </figure>
-  <div className="card-body">
-    <h2 className="card-title">{product_title}</h2>
-    <p>price ${price}</p>
-    <Link to={`product/${product_id}`}><button  className='btn btn-primary '>Details</button></Link>
-  </div>
-</div>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+     {
+      product.map(item => (<Allproducts key={item.product_id} loadData={item} ></Allproducts>))
+     }
+ 
     </div>
   )
 }
+//     

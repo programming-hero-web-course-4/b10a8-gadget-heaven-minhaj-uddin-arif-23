@@ -218,7 +218,7 @@
     "product_id": 313,
     "product_title": "Apple MacBook Air (M1) - 256GB",
     "product_image": "https://i.ibb.co.com/fr2Hv2f/mac1.jpg",
-    "category": "Laptops",
+    "category": "Macbook",
     "price": 1299,
     "description": "Apple MacBook Air with M1 chip, 8GB RAM, and 256GB SSD.",
     "Specification": [
@@ -234,7 +234,7 @@
     "product_id": 314,
     "product_title": "Apple MacBook Pro (M2) - 512GB",
     "product_image": "https://i.ibb.co.com/2dtKS67/mac3.jpg",
-    "category": "Laptops",
+    "category": "Macbook",
     "price": 1999,
     "description": "Apple MacBook Pro with M2 chip, 16GB RAM, and 512GB SSD.",
     "Specification": [
@@ -250,7 +250,7 @@
     "product_id": 315,
     "product_title": "Apple MacBook Air (M1) - 512GB",
     "product_image": "https://i.ibb.co.com/4fpW71d/mac2.jpg",
-    "category": "Laptops",
+    "category": "Macbook",
     "price": 1499,
     "description": "Apple MacBook Air with M1 chip, 16GB RAM, and 512GB SSD.",
     "Specification": [

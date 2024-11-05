@@ -8,6 +8,7 @@ import ProductDetails from "../components/ProductDetails";
 import Statistics from "../pages/Statistics";
 import Cart from "../components/Cart";
 import Wishlist from "../components/Wishlist";
+import ShowAlitem from "../components/ShowAlitem";
 
 
 const routers = createBrowserRouter([
@@ -19,12 +20,25 @@ const routers = createBrowserRouter([
         {
           path:'/',
           element:<Home />,
-          loader:() => fetch("./All_fake_data.json")
+          loader:() => fetch("../category.json"),
+          children:[
+            {
+              path:'/category/:category',
+              element:<ShowAlitem />,
+              loader:() => fetch("../All_fake_data.json")
+            },
+            {
+              path:'/',
+              element:<ShowAlitem />,
+              loader:() => fetch("../All_fake_data.json")
+            },
+          ]
         },
+       
         {
           path:'/statistics',
           element:<Statistics />,
-          loader:() => fetch("./All_fake_data.json")
+          // loader:() => fetch("./All_fake_data.json")
         },
         {
           path:'/',
@@ -33,20 +47,20 @@ const routers = createBrowserRouter([
         {
             path:'product/:product_id',
             element:<ProductDetails />,
-            loader:() => fetch("./All_fake_data.json")
+            loader:() => fetch("/All_fake_data.json")
         },
        
         {
           path:'/dashBoard',
           element:<Dashboard />,
-          // loader:() => fetch("./All_fake_data.json")
+          loader:() => fetch("/All_fake_data.json"),
           children:[
             {
-              path:'cart',
+              path:'/dashBoard',
               element:<Cart />
             },
             {
-              path:'whislist',
+              path:'dashBoard',
               element:<Wishlist />
             }
           ]
