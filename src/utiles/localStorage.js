@@ -24,4 +24,12 @@ const addFavourite = (products) => {
   toast.success("Successfully added")
 
 }
-export {addFavourite,getItem}
+const removeCart = id => {
+  const favourites = getItem()
+  const remaining = favourites.filter(product => product.product_id != id)
+  localStorage.setItem("favourite",JSON.stringify(remaining))
+  toast.error("Delete this item")
+}
+
+export {addFavourite,getItem,removeCart}
+

@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from 'react-router-dom'
 import ProductDetailstext from './ProductDetailstext'
 import { toast } from 'react-hot-toast';
 import { addFavourite } from '../utiles/localStorage';
+import Nabvar from './Nabvar';
 
 
 // const notify = () => toast.success('Successfully added you Item.');
@@ -20,11 +21,19 @@ export default function ProductDetails() {
   const handleAddToFaourite = ans => {
     addFavourite(ans)
   }
+  const [count, setCount] = useState(0)
+  function handleclick(){
+    setCount(count + 1)
+    console.log(count);
+  }
   return (
     
     <div>
+      {/* <Nabvar count={count} /> */}
+      <div className=''>
       <ProductDetailstext />
-      <div className="hero bg-base-200 h-[90vh]">
+      </div>
+      <div className="absolute top-1/3  lg:ml-44  hero bg-base-100 h-[60vh] w-[700px] ml-48 rounded-xl shadow-2xl">
   <div className="hero-content flex-col lg:flex-row">
     <img
       src={product_image}
@@ -41,10 +50,13 @@ export default function ProductDetails() {
       </ul>
       <h2>Rating <i class="fa-solid fa-star text-yellow-300"></i></h2>
       <h1 className='text-yellow-500'><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>{rating}</h1>
-          <div className='flex gap-3 my-4'>
-          <button onClick={() => handleAddToFaourite(ans)} className='btn bg-purple-600 text-white rounded-3xl '>
+          <div className='flex gap-3  '>
+          <button onClick={() =>{
+            handleAddToFaourite(ans)
+            handleclick()
+            }} className='btn bg-purple-600 text-white rounded-3xl  '>
           Add to cart <i class="fa-solid fa-cart-plus"></i></button>
-          <button><a href=""><i class="fa-regular fa-heart"></i></a></button>
+          <button className=''><a href=""><i class="fa-regular fa-heart"></i></a></button>
           </div>
     </div>
   </div>

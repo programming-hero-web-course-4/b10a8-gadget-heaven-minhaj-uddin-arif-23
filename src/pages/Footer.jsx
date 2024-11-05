@@ -3,7 +3,7 @@ import React from 'react'
 export default function Footer() {
   return (
     <div>
-      <footer className="footer  text-base-content p-10">
+      <footer className="footer  text-base-content p-10 mt-32">
      
       <nav className='ml-32 mt-16 p-8'>
      

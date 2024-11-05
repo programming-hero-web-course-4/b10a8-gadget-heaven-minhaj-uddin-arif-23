@@ -21,7 +21,7 @@ export default function ShowAlitem() {
     },[data,category])
 
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-2 border-blue-500 w-[88%] my-3'>
      {
       product.map(item => (<Allproducts key={item.product_id} loadData={item} ></Allproducts>))
      }

@@ -9,11 +9,11 @@ export default function DashBoardHeading() {
         <h1 className='text-4xl '>Dashboard</h1>
         <p> You can see details each product</p>
         <div className='flex ml-[420px] my-5 mb-10 gap-6'>
-          <NavLink to={`/dashBoard`} className={(e) => {return e.isActive?"text-3xl":""}}>
+          <NavLink to={`/dashBoard`} className={({isActive}) => `${isActive? " btn-warning":""}`}>
             <button className='btn'>Cart</button>
           </NavLink>
-          <NavLink to={`/dashBoard`} className={(e) => {return e.isActive?"text-3xl":""}}>
-            <button className='btn'>Wishlist</button>
+          <NavLink to={`/dashBoard/id`} className={({isActive}) => `${isActive? " btn-warning":""}`}>
+            <button className='btn '>Wishlist</button>
           </NavLink>
           
         </div>

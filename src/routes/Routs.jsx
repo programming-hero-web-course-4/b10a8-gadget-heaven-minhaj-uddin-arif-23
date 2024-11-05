@@ -3,7 +3,6 @@ import RootElement from "../RootLayout/RootElement";
 import ErrorPage from "../pages/ErrorPage";
 import Home from "../pages/Home";
 import Dashboard from "../pages/Dashboard";
-import Two from "../components/two";
 import ProductDetails from "../components/ProductDetails";
 import Statistics from "../pages/Statistics";
 import Cart from "../components/Cart";
@@ -40,10 +39,7 @@ const routers = createBrowserRouter([
           element:<Statistics />,
           // loader:() => fetch("./All_fake_data.json")
         },
-        {
-          path:'/',
-          element:<Two />,
-        },
+        
         {
             path:'product/:product_id',
             element:<ProductDetails />,
@@ -60,7 +56,7 @@ const routers = createBrowserRouter([
               element:<Cart />
             },
             {
-              path:'dashBoard',
+              path:'/dashBoard/id',
               element:<Wishlist />
             }
           ]

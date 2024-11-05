@@ -1,9 +1,11 @@
 import React from "react";
 import { NavLink, Outlet, useLoaderData } from "react-router-dom";
 import ShowAlitem from "../components/ShowAlitem";
-import Two from "../components/two";
+// import Two from "../components/two";
 import Categories from "../components/Categories";
 import Banner from "../components/Banner"
+import Two from "../components/Two";
+// import Two from "../components/Two";
 export default function Home() {
   const data = useLoaderData();
   console.log(data);
@@ -12,6 +14,7 @@ export default function Home() {
       <div  className="bg-purple-600 text-white rounded-2xl  ">
         <Two />  
       </div> 
+     
       <div className=" top-60">
         <Banner />
       </div>

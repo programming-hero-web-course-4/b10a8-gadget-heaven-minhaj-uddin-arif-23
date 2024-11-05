@@ -7,9 +7,9 @@ export default function Allproducts({ loadData }) {
   return (
     <div>
      
-      <div className="card bg-base-100 w-[300px] shadow-xl">
-        <figure className="w-ful h-44 overflow-hidden">
-          <img src={product_image} />
+      <div className="card bg-blue-50 w-[300px] shadow-2xl my-3 ">
+        <figure className="w-full h-44 overflow-hidden p-5 rounded-2xl">
+          <img src={product_image} className="" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{product_title}</h2>
