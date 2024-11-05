@@ -5,8 +5,10 @@ import Home from "../pages/Home";
 import Dashboard from "../pages/Dashboard";
 import Two from "../components/two";
 import ProductDetails from "../components/ProductDetails";
-import Laptop from "../components/Laptop";
-import Accessories from "../components/Accessories";
+import Statistics from "../pages/Statistics";
+import Cart from "../components/Cart";
+import Wishlist from "../components/Wishlist";
+
 
 const routers = createBrowserRouter([
     {
@@ -20,6 +22,11 @@ const routers = createBrowserRouter([
           loader:() => fetch("./All_fake_data.json")
         },
         {
+          path:'/statistics',
+          element:<Statistics />,
+          loader:() => fetch("./All_fake_data.json")
+        },
+        {
           path:'/',
           element:<Two />,
         },
@@ -28,20 +35,21 @@ const routers = createBrowserRouter([
             element:<ProductDetails />,
             loader:() => fetch("./All_fake_data.json")
         },
-        {
-          path:'/laptop',
-          element: <Laptop />,
-          loader:() => fetch('./Laptop.json')
-        },
-        {
-          path:'/accessories',
-          element: <Accessories />,
-          loader:() => fetch('./Accessories.json')
-        },
+       
         {
           path:'/dashBoard',
           element:<Dashboard />,
           // loader:() => fetch("./All_fake_data.json")
+          children:[
+            {
+              path:'cart',
+              element:<Cart />
+            },
+            {
+              path:'whislist',
+              element:<Wishlist />
+            }
+          ]
         },
       ]
     } 

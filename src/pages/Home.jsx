@@ -8,19 +8,19 @@ export default function Home() {
   return (
     <div>
       <div className="bg-purple-600 text-white rounded-2xl ">
-        <Two />
-      </div>
-      <div className="grid grid-cols-12 ">
-        <div className= " col-span-12 grid md:col-span-3 ">
-        <NavLink ><button className="btn btn-outline btn-accent">All Product</button></NavLink>
-        <NavLink to={`/laptop`} ><button className="btn btn-outline btn-accent">Laptop</button></NavLink>
-        <NavLink ><button className="btn btn-outline btn-accent">Phones</button></NavLink>
-        <NavLink to={`/accessories`} ><button className="btn btn-outline btn-accent">Accessories</button></NavLink>
-        <NavLink ><button className="btn btn-outline btn-accent">Mac Book</button></NavLink>
-        <NavLink ><button className="btn btn-outline btn-accent">Smart Watch</button></NavLink>
+        <Two />  
+      </div> 
+      <div className="flex ">
+        <div className= "border-2 border-red-600 w-[20%] gap-10">
+        <NavLink ><button className="btn btn-outline btn-accent w-[160px]">All Product</button></NavLink>
+        <NavLink to={`/laptop`} ><button className="btn btn-outline btn-accent w-[160px]">Laptop</button></NavLink>
+        <NavLink ><button className="btn btn-outline btn-accent w-[160px]">Phones</button></NavLink>
+        <NavLink to={`/accessories`} ><button className="btn btn-outline btn-accent w-[160px] ">Accessories</button></NavLink>
+        <NavLink ><button className="btn btn-outline btn-accent w-[160px]">Mac Book</button></NavLink>
+        <NavLink ><button className="btn btn-outline btn-accent w-[160px]">Smart Watch</button></NavLink>
   
         </div>
-        <div className=  " col-span-12 grid grid-cols-1 md:col-span-9 md:grid-cols-2 lg:col-span-9  gap-7 my-12 border-2 border-black">
+        <div className=  " grid lg:grid-cols-3">
           {data.map((item) => (
             <ShowAlitem key={item.product_id} loadData={item} />
           ))}

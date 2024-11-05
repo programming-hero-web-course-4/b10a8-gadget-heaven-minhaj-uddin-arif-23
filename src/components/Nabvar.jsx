@@ -29,7 +29,7 @@ export default function Nabvar() {
         <NavLink to={`/execories`} className={(e) => {return e.isActive? "red":""}} ><li>Accessories</li></NavLink>
         </ul>
       </div>
-      <a className="btn btn-ghost text-sm">Gadget Heaven</a>
+      <NavLink to={`/`} className="btn btn-ghost text-sm">Gadget Heaven</NavLink>
     </div>
     <div className="navbar-center invisible lg:visible lg:flex">
       <ul className="menu menu-horizontal px-1 text-sm font-semibold gap-6">

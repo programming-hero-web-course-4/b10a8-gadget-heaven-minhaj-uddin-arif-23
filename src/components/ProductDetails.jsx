@@ -1,34 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useLoaderData, useParams } from 'react-router-dom'
 import ProductDetailstext from './ProductDetailstext'
 import { toast } from 'react-hot-toast';
+import { addFavourite } from '../utiles/localStorage';
+import { key } from 'localforage';
 
-const notify = () => toast.success('Successfully added you Item.');
-/*
-"product_id": 313,
-    "product_title": "Apple MacBook Air (M1) - 256GB",
-    "product_image": "https://i.ibb.co.com/fr2Hv2f/mac1.jpg",
-    "category": "Laptops",
-    "price": 1299,
-    "description": "Apple MacBook Air with M1 chip, 8GB RAM, and 256GB SSD.",
-    "Specification": [
-      "Processor: Apple M1",
-      "RAM: 8GB",
-      "Storage: 256GB SSD",
-      "Display: 13.3 inches Retina"
-    ],
-    "availability": true,
-    "rating": 4.9
-*/
+// const notify = () => toast.success('Successfully added you Item.');
+
 
 export default function ProductDetails() {
   const {product_id} = useParams()
   // console.log(product_id);
   const number = parseInt(product_id)
   const data = useLoaderData()
-  const ans = data.find(product => product.product_id === number)
+  const [isFavourite, setIsfavourite] = useState(false)
+  const ans = data.find(product => (  product.product_id === number))
   // console.log(ans);
   const {product_image,price,Specification,rating,product_title} = ans
+  const handleAddToFaourite = ans => {
+    addFavourite(ans)
+  }
   return (
     
     <div>
@@ -45,13 +36,13 @@ export default function ProductDetails() {
      <h1 className='text-2xl my-2'>Specification </h1>
       <ul className="text-sm">
         {
-          Specification.map(item => <li key={item.product_id} >{item}</li>)
+          Specification.map((item,index) => <li key={index} >{item}</li>)
         }
       </ul>
       <h2>Rating <i class="fa-solid fa-star text-yellow-300"></i></h2>
       <h1 className='text-yellow-500'><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>{rating}</h1>
           <div className='flex gap-3 my-4'>
-          <button onClick={notify} className='btn bg-purple-600 text-white rounded-3xl '>
+          <button onClick={() => handleAddToFaourite(ans)} className='btn bg-purple-600 text-white rounded-3xl '>
           Add to cart <i class="fa-solid fa-cart-plus"></i></button>
           <button><a href=""><i class="fa-regular fa-heart"></i></a></button>
           </div>
