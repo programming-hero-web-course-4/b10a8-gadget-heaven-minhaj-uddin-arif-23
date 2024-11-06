@@ -3,9 +3,9 @@ import React from 'react'
 export default function Footer() {
   return (
     <div>
-      <footer className="footer  text-base-content p-10 mt-48">
+      <footer className="footer  text-base-content p-10 mt-56">
      
-      <nav className='ml-32 mt-16 p-8'>
+      <nav className='ml-32 mt-16 p-8 font-semibold'>
      
     <h6 className="text-lg font-bol">Services</h6>
     <a className="link link-hover">Product Support </a>
@@ -15,11 +15,11 @@ export default function Footer() {
   </nav>
   <ul className='ml-10'>
   <div className='text-center items-center mt-3'>
-          <h1 className='text-xl font-bold'>Gadget Heaven</h1>
-          <p className='text-sm text-gray-600'>Leading the way in cutting-edge tecnology and innovation</p>
+          <h1 className='text-4xl font-bold mb-3'>Gadget Heaven</h1>
+          <p className='text-lg text-gray-600'>Leading the way in cutting-edge tecnology and innovation</p>
         </div>
         <div className='underline'></div>
-  <div className='ml-28  p-7'>
+  <div className='ml-28 font-semibold p-7'>
   <h6 className="text-lg font-bol">Company</h6>
     <li className="link link-hover">About Us</li>
     <li className="link link-hover">Careers</li>
@@ -27,7 +27,7 @@ export default function Footer() {
   
   </div>
   </ul>
-  <ul className='mt-16 mr-28 p-6 '>
+  <ul className='mt-16 mr-28 p-6 font-semibold'>
     <h6 className=" text-lg font-bold">Legal</h6>
     <a className="link link-hover">Terms of use</a>
     <a className="link link-hover">Privacy policy</a>

@@ -34,7 +34,7 @@ export default function ProductDetails() {
       <div className="">
         <ProductDetailstext />
       </div>
-      <div className="absolute top-1/3  lg:ml-60  hero bg-base-100 h-[65vh] w-[700px] ml-48 rounded-xl shadow-2xl">
+      <div className="absolute top-1/3  lg:ml-96  hero bg-base-100 h-[65vh] w-[700px] ml-48 rounded-xl shadow-2xl">
         <div className="hero-content flex-col lg:flex-row">
           <img src={product_image} className="max-w-sm rounded-lg shadow-2xl" />
           <div>
