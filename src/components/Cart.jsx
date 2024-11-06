@@ -60,7 +60,7 @@ export default function Cart() {
               Sort by Price
             </button>
             {/* disabled={isFavourite} */}
-            <button  onClick={showModal} className="btn bg-purple-500 text-white rounded-3xl" >Purchase</button>
+            <button disabled={product.length === 0} onClick={showModal} className={`btn rounded-full ${product.length === 0?"text-gray-500":"text-black"}`}>Purchase</button>
           </div>
         </div>
      
