@@ -17,23 +17,19 @@ export default function ProductDetails() {
   const [isFavourite, setIsfavourite] = useState(false)
   const ans = data.find(product => (  product.product_id === number))
   // console.log(ans);
+  // if(ans){
+  //   setIsfavourite(true)
+  // }
   const {product_image,price,Specification,rating,product_title} = ans
   const handleAddToFaourite = ans => {
     addFavourite(ans)
   }
+  
   const handleAddWhichList = ans => {
     addToWhishlist(ans)
+    setIsfavourite(true)
   }
-  const [count, setCount] = useState(0)
-  const [count1, setCoun12] = useState(0)
-  function handleclick(){
-    setCount(count + 1)
-    console.log(count);
-  }
-  function handleclick2(){
-    setCoun12(count1 + 1)
-    console.log(count1);
-  }
+
   return (
     
     <div>
@@ -41,7 +37,7 @@ export default function ProductDetails() {
       <div className=''>
       <ProductDetailstext />
       </div>
-      <div className="absolute top-1/3  lg:ml-60  hero bg-base-100 h-[60vh] w-[700px] ml-48 rounded-xl shadow-2xl">
+      <div className="absolute top-1/3  lg:ml-60  hero bg-base-100 h-[65vh] w-[700px] ml-48 rounded-xl shadow-2xl">
   <div className="hero-content flex-col lg:flex-row">
     <img
       src={product_image}
@@ -61,16 +57,17 @@ export default function ProductDetails() {
           <div className='flex gap-3  '>
           <button onClick={() =>{
             handleAddToFaourite(ans)
-            handleclick()
+            // handleclick()
             }} className='btn bg-purple-600 text-white rounded-3xl  '>
           Add to cart <i class="fa-solid fa-cart-plus"></i></button>
-          <button
+          <button disabled={isFavourite}
            onClick={() => {
             handleAddWhichList(ans)
-            handleclick2()
+            // handleclick2()
+            
            }} 
           
-          className=''><p><i class="fa-regular fa-heart"></i></p></button>
+          className={`${isFavourite? "text-gray-400":"text-black"}`}><p><i class="fa-regular fa-heart"></i></p></button>
           </div>
     </div>
   </div>

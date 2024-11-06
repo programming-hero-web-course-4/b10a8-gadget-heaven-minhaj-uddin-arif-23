@@ -1,9 +1,12 @@
 import React from 'react'
 import { addFavourite, addToWhishlist } from '../utiles/localStorage';
+import { useLocation } from 'react-router-dom';
+import { FiTrash2 } from 'react-icons/fi';
 
-export default function WhichlistItem({loadData}) {
+export default function WhichlistItem({loadData,handleRemove2}) {
   const { product_image, product_title, price, product_id,category } = loadData || {};
   // console.log(loadData);
+  const {pathname} = useLocation()
   const handleAddToWhichList= loadData => {
     addToWhishlist(loadData)
   }
@@ -22,6 +25,14 @@ export default function WhichlistItem({loadData}) {
           Add to cart <i class="fa-solid fa-cart-plus"></i></button>
           
         </div>
+       <div>
+       {
+            pathname === '/dashBoard/id' && (
+              <button onClick={() => handleRemove2(product_id)}  className="btn btn-error ml-6 mt-28 text-white" ><FiTrash2 /></button>
+              
+            )
+          }
+       </div>
       </div>
     </div>
   );

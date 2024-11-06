@@ -20,7 +20,7 @@ export default function Modal({totalCost,resetCart}) {
          </div>
           <div className="modal-action">
             <form method="dialog">
-              <button className="btn" onClick={handleClose}>Close</button>
+              <button className="btn bg-purple-500  text-white mr-40 px-12 rounded-full" onClick={handleClose}>Close</button>
             </form>
           </div>
         </div>

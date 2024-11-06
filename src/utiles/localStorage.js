@@ -12,6 +12,17 @@ const getItem =() => {
     return []
   }
 }
+const getItemwhish =() => {
+  const all = localStorage.getItem("favourites")
+  if(all){
+    const favourites = JSON.parse(all)
+    console.log(favourites);
+    return favourites
+  }else{
+    console.log([]);
+    return []
+  }
+}
 
 
 const addFavourite = (products) => {
@@ -26,9 +37,9 @@ const addFavourite = (products) => {
 }
 const addToWhishlist = (products) => {
   // console.log(products);
-  const favourites = getItem()
+  const favourites = getItemwhish()
   const isExit = favourites.find(item => item.product_id == products.product_id)
-  if(isExit) return toast.error("Already item  exit")
+  if(isExit) return;
   favourites.push(products)
   localStorage.setItem("favourites",JSON.stringify(favourites))
   toast.success("Added To Whishlist")
@@ -41,5 +52,13 @@ const removeCart = id => {
   toast.error("Delete this item")
 }
 
-export {addFavourite,getItem,removeCart,addToWhishlist}
+
+const removeCart2 = id => {
+  const favourites = getItemwhish()
+  const remaining = favourites.filter(product => product.product_id != id)
+  localStorage.setItem("favourites",JSON.stringify(remaining))
+  toast.error("Delete this item")
+}
+
+export {addFavourite,getItem,removeCart,addToWhishlist,getItemwhish,removeCart2}
 

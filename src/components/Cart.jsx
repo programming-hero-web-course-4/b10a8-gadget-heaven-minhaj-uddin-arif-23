@@ -52,15 +52,15 @@ export default function Cart() {
             <h1 className="text-xl font-semibold">Cart</h1>
           </div>
           <div className="flex flex-col lg:flex-row">
-            <h2 className="font-semibold mr-4 text-xl mt-2">Total Cost {totalCost}</h2>
+            <h2 className="font-semibold mr-4 text-xl mt-2">Total Cost $ {totalCost}</h2>
             <button
               onClick={() => handleSort("price")}
-              className="btn bg-purple-700 text-white mr-5"
+              className="btn rounded-3xl hover:bg-purple-500  btn-outline mr-5"
             >
               Sort by Price
             </button>
             {/* disabled={isFavourite} */}
-            <button  onClick={showModal} className="btn" >Purchase</button>
+            <button  onClick={showModal} className="btn bg-purple-500 text-white rounded-3xl" >Purchase</button>
           </div>
         </div>
      

@@ -9,7 +9,7 @@ export default function Allproducts({ loadData }) {
     <>
      
       <div>
-        <div className="card  w-[280px] shadow-2xl my-3 px-4 py-3 ">
+        <div className="card  w-[280px] shadow-xl border-2 border-gray-100 my-3 px-3 py-2 ">
           <figure className="w-full h-44 overflow-hidden p-5 rounded-2xl">
             <img src={product_image} className="" />
           </figure>
@@ -17,7 +17,7 @@ export default function Allproducts({ loadData }) {
             <h2 className="card-title">{product_title}</h2>
             <p>Price ${price}</p>
             <Link to={`/product/${product_id}`} className="">
-              <button className="btn btn-outline rounded-3xl  ">Details</button>
+              <button className="btn btn-outline rounded-full bg-purple-600 text-white  ">Details</button>
             </Link>
           </div>
         </div>

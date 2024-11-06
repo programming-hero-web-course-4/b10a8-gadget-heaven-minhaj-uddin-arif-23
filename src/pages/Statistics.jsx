@@ -1,6 +1,8 @@
 import React from 'react'
 import Nabvar from '../components/Nabvar'
 import { BarChart, Bar,XAxis, YAxis,Tooltip,CartesianGrid } from 'recharts';
+import { Helmet } from 'react-helmet';
+import StatisticsText from '../components/StatisticsText';
 
 export default function Statistics() {
   const productData = [
@@ -15,8 +17,16 @@ export default function Statistics() {
   
   return (
     <div>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>Statistics</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
       <div>
       <Nabvar />
+      </div>
+      <div>
+        <StatisticsText />
       </div>
    <div className=' ml- mt-10 shadow-lg bg-purple-50 p-3  rounded-md '>
  <div className='ml-44 font-semibold'>

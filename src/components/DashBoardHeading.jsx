@@ -10,14 +10,14 @@ const {pathname} = useLocation()
         <Nabvar />
       </div>
       <div className='text-center bg-purple-600 my-5 p-10 text-white  w-[100%] '>
-        <h1 className='text-4xl '>Dashboard</h1>
+        <h1 className='text-4xl font-semibold'>Dashboard</h1>
         <p> You can see details each product</p>
         <div className='flex ml-[470px] my-5 mb-10 gap-6'>
-          <NavLink to={`/dashBoard`} className={({isActive}) => `${(isActive && !pathname.includes("id") )?  " btn-warning":""}`}>
-            <button className='btn'>Cart</button>
+          <NavLink to={`/dashBoard`} className={({isActive}) => `${(isActive && !pathname.includes("id") )?  "btn-info  ":""}`}>
+            <button className='btn rounded-full'>Cart</button>
           </NavLink>
-          <NavLink to={`/dashBoard/id`} className={({isActive}) => `${isActive? " btn-warning":""}`}>
-            <button className='btn '>Wishlist</button>
+          <NavLink to={`/dashBoard/id`} className={({isActive}) => `${isActive? "btn-info":""}`}>
+            <button className='btn rounded-full'>Wishlist</button>
           </NavLink>
           
         </div>

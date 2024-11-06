@@ -9,6 +9,7 @@ import Cart from "../components/Cart";
 import Wishlist from "../components/Wishlist";
 import ShowAlitem from "../components/ShowAlitem";
 import NoDataItem from "../components/NoDataItem";
+import Sell from "../pages/Sell";
 
 
 const routers = createBrowserRouter([
@@ -44,7 +45,12 @@ const routers = createBrowserRouter([
         {
           path:'/statistics',
           element:<Statistics />,
-          // loader:() => fetch("./All_fake_data.json")
+          
+        },
+        {
+          path:'sell',
+          element:<Sell />,
+         
         },
         
         {
