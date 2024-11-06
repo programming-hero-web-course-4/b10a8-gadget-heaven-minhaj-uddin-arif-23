@@ -28,7 +28,7 @@ export default function Statistics() {
       <div>
         <StatisticsText />
       </div>
-   <div className=' ml- mt-10 shadow-lg bg-purple-50 p-3  rounded-md '>
+   <div className=' ml-36 mt-10 shadow-sm  p-3  rounded-md '>
  <div className='ml-44 font-semibold'>
  <BarChart width={750} height={350} data={productData} fill="#8884d8" barSize={40}>
       <XAxis  dataKey="name"/>

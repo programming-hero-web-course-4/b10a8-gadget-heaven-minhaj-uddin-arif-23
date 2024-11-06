@@ -24,7 +24,7 @@ export default function ShowAlitem() {
     },[data,category])
 
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  w-[88%] my-3 mt-16'>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  w-[88%] my-3 mt-16'>
      {
       product.length === 0? <NoDataItem /> : product.map(item => (<Allproducts key={item.product_id} loadData={item} ></Allproducts>))
      }

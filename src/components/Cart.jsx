@@ -49,7 +49,7 @@ export default function Cart() {
       <div className="mt-10">
         <div className="flex justify-between ">
           <div>
-            <h1 className="text-xl font-semibold">Cart</h1>
+            <h1 className="text-4xl font-semibold">Cart</h1>
           </div>
           <div className="flex flex-col lg:flex-row">
             <h2 className="font-semibold mr-4 text-xl mt-2">Total Cost $ {totalCost}</h2>
