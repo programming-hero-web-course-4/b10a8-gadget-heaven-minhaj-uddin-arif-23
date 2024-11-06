@@ -16,7 +16,6 @@ export default function Cart() {
     setProduct(localData || data);
   }, [data]);
 
-    // const [isFavourite,setIsFavourite] = useState(false)
 
   const handleSort = (sortby) => {
     if (sortby === "price") {
@@ -40,15 +39,19 @@ export default function Cart() {
     const localData = getItem();
     setProduct(localData)
   }
+  const resetCart = () => {
+    localStorage.clear()
+    setProduct([])
+  }
 
   return (
     <div>
       <div className="mt-10">
-        <div className="flex justify-between">
+        <div className="flex justify-between ">
           <div>
             <h1 className="text-xl font-semibold">Cart</h1>
           </div>
-          <div className="flex ">
+          <div className="flex flex-col lg:flex-row">
             <h2 className="font-semibold mr-4 text-xl mt-2">Total Cost {totalCost}</h2>
             <button
               onClick={() => handleSort("price")}
@@ -67,7 +70,7 @@ export default function Cart() {
           ))}
         </div>
       </div>
-      <Modal totalCost={totalCost} />
+      <Modal totalCost={totalCost} resetCart={resetCart}/>
     </div>
   );
 }

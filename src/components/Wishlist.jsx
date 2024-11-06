@@ -15,12 +15,12 @@ export default function Cart() {
     const localData = getItem()
     setProduct(localData || data)
   },[data])
-  const handleSort = sortby =>{
-    if(sortby === 'price'){
-      const sorted= [...product].sort((a,b) => b.price -a.price )
-      setProduct(sorted)
-    }
-  }
+  // const handleSort = sortby =>{
+  //   if(sortby === 'price'){
+  //     const sorted= [...product].sort((a,b) => b.price -a.price )
+  //     setProduct(sorted)
+  //   }
+  // }
 
   return (
     <div>

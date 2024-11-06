@@ -24,6 +24,16 @@ const addFavourite = (products) => {
   toast.success("Successfully added")
 
 }
+const addToWhishlist = (products) => {
+  // console.log(products);
+  const favourites = getItem()
+  const isExit = favourites.find(item => item.product_id == products.product_id)
+  if(isExit) return toast.error("Already item  exit")
+  favourites.push(products)
+  localStorage.setItem("favourites",JSON.stringify(favourites))
+  toast.success("Added To Whishlist")
+
+}
 const removeCart = id => {
   const favourites = getItem()
   const remaining = favourites.filter(product => product.product_id != id)
@@ -31,5 +41,5 @@ const removeCart = id => {
   toast.error("Delete this item")
 }
 
-export {addFavourite,getItem,removeCart}
+export {addFavourite,getItem,removeCart,addToWhishlist}
 

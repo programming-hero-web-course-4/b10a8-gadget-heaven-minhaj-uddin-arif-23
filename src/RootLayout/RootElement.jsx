@@ -7,12 +7,12 @@ import Two from "../components/Two";
 export default function RootElement() {
   return (
     <>
-      <div className="w-11/12 mx-auto p-4  ">
+      <div className=" p-4  ">
       <div className=" relative rounded-lg">
-      <Nabvar />
+      {/* <Nabvar /> */}
       
       </div>
-        <div>
+        <div className="">
           <Outlet />
         </div>
       </div>

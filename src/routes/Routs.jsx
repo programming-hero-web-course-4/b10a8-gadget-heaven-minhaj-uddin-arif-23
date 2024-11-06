@@ -8,6 +8,7 @@ import Statistics from "../pages/Statistics";
 import Cart from "../components/Cart";
 import Wishlist from "../components/Wishlist";
 import ShowAlitem from "../components/ShowAlitem";
+import NoDataItem from "../components/NoDataItem";
 
 
 const routers = createBrowserRouter([
@@ -31,6 +32,12 @@ const routers = createBrowserRouter([
               element:<ShowAlitem />,
               loader:() => fetch("../All_fake_data.json")
             },
+            {
+              path:'/',
+              element:<NoDataItem />,
+              
+            },
+            
           ]
         },
        

@@ -1,8 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Modal({totalCost}) {
+export default function Modal({totalCost,resetCart}) {
   const navigate = useNavigate()
+  const handleClose = () => {
+    resetCart()
+    navigate('/')
+  }
   return (
     <div>
      
@@ -16,7 +20,7 @@ export default function Modal({totalCost}) {
          </div>
           <div className="modal-action">
             <form method="dialog">
-              <button className="btn" onClick={() => navigate('/')}>Close</button>
+              <button className="btn" onClick={handleClose}>Close</button>
             </form>
           </div>
         </div>

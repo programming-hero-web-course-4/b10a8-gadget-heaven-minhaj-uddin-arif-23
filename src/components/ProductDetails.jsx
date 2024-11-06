@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import { useLoaderData, useParams } from 'react-router-dom'
 import ProductDetailstext from './ProductDetailstext'
 import { toast } from 'react-hot-toast';
-import { addFavourite } from '../utiles/localStorage';
+import { addFavourite, addToWhishlist } from '../utiles/localStorage';
 import Nabvar from './Nabvar';
 
 
-// const notify = () => toast.success('Successfully added you Item.');
+const notify = () => toast.success('You add to WishList item.');
 
 
 export default function ProductDetails() {
@@ -21,10 +21,18 @@ export default function ProductDetails() {
   const handleAddToFaourite = ans => {
     addFavourite(ans)
   }
+  const handleAddWhichList = ans => {
+    addToWhishlist(ans)
+  }
   const [count, setCount] = useState(0)
+  const [count1, setCoun12] = useState(0)
   function handleclick(){
     setCount(count + 1)
     console.log(count);
+  }
+  function handleclick2(){
+    setCoun12(count1 + 1)
+    console.log(count1);
   }
   return (
     
@@ -33,7 +41,7 @@ export default function ProductDetails() {
       <div className=''>
       <ProductDetailstext />
       </div>
-      <div className="absolute top-1/3  lg:ml-44  hero bg-base-100 h-[60vh] w-[700px] ml-48 rounded-xl shadow-2xl">
+      <div className="absolute top-1/3  lg:ml-60  hero bg-base-100 h-[60vh] w-[700px] ml-48 rounded-xl shadow-2xl">
   <div className="hero-content flex-col lg:flex-row">
     <img
       src={product_image}
@@ -56,7 +64,13 @@ export default function ProductDetails() {
             handleclick()
             }} className='btn bg-purple-600 text-white rounded-3xl  '>
           Add to cart <i class="fa-solid fa-cart-plus"></i></button>
-          <button className=''><a href=""><i class="fa-regular fa-heart"></i></a></button>
+          <button
+           onClick={() => {
+            handleAddWhichList(ans)
+            handleclick2()
+           }} 
+          
+          className=''><p><i class="fa-regular fa-heart"></i></p></button>
           </div>
     </div>
   </div>

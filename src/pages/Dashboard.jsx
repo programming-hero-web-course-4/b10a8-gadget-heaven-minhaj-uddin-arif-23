@@ -4,10 +4,12 @@ import { Outlet, useLoaderData } from "react-router-dom";
 
 export default function Dashboard() {
   return (
-    <div>
+    <div className="">
       <DashBoardHeading />
 
-      <Outlet />
+     <div className="w-11/12 mx-auto">
+     <Outlet />
+     </div>
     </div>
   );
 }

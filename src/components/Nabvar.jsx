@@ -5,7 +5,7 @@ import Two from './Two'
 export default function Nabvar({count}) {
   return (
     <>
-          <div className="navbar bg-purple-600 rounded-xl text-white ">
+          <div className="navbar ">
     <div className="navbar-start">
       <div className="dropdown">
         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -31,19 +31,19 @@ export default function Nabvar({count}) {
         <NavLink to={`/execories`} className={(e) => {return e.isActive? "red":""}} ><li>Accessories</li></NavLink>
         </ul>
       </div>
-      <NavLink to={`/`} className="btn btn-ghost text-sm">Gadget Heaven</NavLink>
+      <NavLink to={`/`} className="btn btn-ghost text-sm broder-2 border-gray-200">Gadget Heaven</NavLink>
     </div>
     <div className="navbar-center invisible lg:visible lg:flex">
       <ul className="menu menu-horizontal px-1 text-sm font-semibold gap-6 ">
-        <NavLink to={`/`} className={(e) => {return e.isActive? "bg-black/60 rounded-md px-4 py-1":""}} ><li>Home</li></NavLink>
-        <NavLink to={`/statistics`} className={(e) => {return e.isActive? "bg-black/60 rounded-md px-4 py-1":""}} ><li className=''>Statistics</li></NavLink>
-        <NavLink to={`/dashBoard`} className={(e) => {return e.isActive? "bg-black/60 rounded-md px-4 py-1":""}} ><button className=''>Dashborad</button></NavLink>
-        {/* <NavLink to={`/execories`} className={(e) => {return e.isActive? "bg-red-500":""}} ><li>Accessories</li></NavLink> */}
+        <NavLink to={`/`} className={(e) => {return e.isActive? "bg-black/60  rounded-md px-4 py-1":""}} ><li>Home</li></NavLink>
+        <NavLink to={`/statistics`} className={(e) => {return e.isActive? "bg-black/90 text-white  rounded-md px-4 py-1":""}} ><li className=''>Statistics</li></NavLink>
+        <NavLink to={`/dashBoard`} className={(e) => {return e.isActive? "bg-black/90 text-white rounded-md px-4 py-1":""}} ><button className=''>Dashborad</button></NavLink>
+        <NavLink to={`/execories`} className={(e) => {return e.isActive? "bg-black/90 text-white rounded-md px-4 py-1":""}} ><li>Accessories</li></NavLink>
       </ul>
     </div>
     <div className="navbar-end gap-4 p-1">
-      <p className=""><i class="fa-solid fa-cart-plus">{count}</i></p>
-      <p ><i class="fa-regular fa-heart"></i></p>
+      <p className="bg-white border-2 border-gray-100 text-black rounded-3xl px-2 py-1"><i class="fa-solid fa-cart-plus">{count}</i></p>
+      <p  className='bg-white text-black rounded-3xl border-2 border-gray-100 px-2 py-1'><i class="fa-regular fa-heart"></i></p>
     </div>
     
   </div>

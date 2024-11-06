@@ -1,11 +1,11 @@
 import React from 'react'
-import { addFavourite } from '../utiles/localStorage';
+import { addFavourite, addToWhishlist } from '../utiles/localStorage';
 
 export default function WhichlistItem({loadData}) {
   const { product_image, product_title, price, product_id,category } = loadData || {};
   // console.log(loadData);
-  const handleAddToFaourite = loadData => {
-    addFavourite(loadData)
+  const handleAddToWhichList= loadData => {
+    addToWhishlist(loadData)
   }
   return (
     <div className="">
@@ -18,7 +18,7 @@ export default function WhichlistItem({loadData}) {
           <h2 className="card-title">{product_title}</h2>
           <p className="my-2 font-semibold">Price ${price}</p>
          
-          <button onClick={() => handleAddToFaourite(loadData)} className='btn bg-purple-600 text-white rounded-3xl '>
+          <button onClick={() => handleAddToWhichList(loadData)} className='btn bg-purple-600 text-white rounded-3xl '>
           Add to cart <i class="fa-solid fa-cart-plus"></i></button>
           
         </div>
